@@ -2,7 +2,7 @@
 
 namespace BiblioApi.Models
 {
-    public class AlbumArtistRelation
+    public class GroupArtistRelation
     {
         public int Id                   { get; set; }
         public Group Group              { get; set; }
