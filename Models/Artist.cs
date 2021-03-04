@@ -11,8 +11,8 @@ namespace BiblioApi.Models
         public string Gender            { get; set; }
         public string Nationality       { get; set; }
         public string Picture           { get; set; }
-        public DateTime BeginCarrerDate { get; set; }
-        public DateTime EndCarrerDate   { get; set; }
-        public DateTime DateCreation    { get; set; }
+        public DateTime BeginCareerDate { get; set; }
+        public DateTime EndCareerDate   { get; set; }
+        public DateTime DateOfCreation    { get; set; }
     }
 }

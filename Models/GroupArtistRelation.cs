@@ -7,6 +7,6 @@ namespace BiblioApi.Models
         public int Id                   { get; set; }
         public Group Group              { get; set; }
         public Artist Artist            { get; set; }
-        public DateTime DateCreation    { get; set; }
+        public DateTime DateOfCreation    { get; set; }
     }
 }
