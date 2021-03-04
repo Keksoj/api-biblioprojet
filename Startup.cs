@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+
 using System;
 using System.Text.Json.Serialization;
 
@@ -38,6 +39,8 @@ namespace BiblioApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(options=>options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod() );
 
             app.UseHttpsRedirection();
 
