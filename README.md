@@ -132,3 +132,12 @@ Par exemple :
 ```cs
 services.AddDbContext<ArtistContext>(opt => opt.UseInMemoryDatabase("Artistlist"));
 ```
+
+### CORS
+
+Il faut ajouter dans le `startup.cs`:
+
+```cs
+app.UseCors(options=>options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod() );
+
+```
