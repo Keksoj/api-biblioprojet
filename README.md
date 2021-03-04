@@ -141,3 +141,11 @@ Il faut ajouter dans le `startup.cs`:
 app.UseCors(options=>options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod() );
 
 ```
+
+### Ajouter swagger
+
+      dotnet add BiblioApi.csproj package Swashbuckle.AspNetCore -v 5.6.3
+
+Follow [those instructions](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-5.0&tabs=visual-studio)
+
+After `dotnet run`, swagger is at <https://localhost:5001/swagger/index.html>
