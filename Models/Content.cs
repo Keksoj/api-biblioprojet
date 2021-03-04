@@ -14,8 +14,8 @@ namespace BiblioApi.Models
         
         public int TypeId                   { get; set; }
         public string Picture               { get; set; }
-        public DateTime DateOfPublication     { get; set; }
-        public DateTime DateOfCreation        { get; set; }
+        public DateTime DatePublication     { get; set; }
+        public DateTime DateCreation        { get; set; }
         public string Description           { get; set; }
     }
 }

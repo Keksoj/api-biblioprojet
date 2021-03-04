@@ -9,6 +9,6 @@ namespace BiblioApi.Models
         public string Name              { get; set; }
         public DateTime PublicationDate { get; set; }
         public string Picture           { get; set; }
-        public DateTime DateOfCreation    { get; set; }
+        public DateTime DateCreation    { get; set; }
     }
 }
