@@ -55,7 +55,8 @@ namespace BiblioApi.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Artist>> GetArtist(long id)
         {
-            var artist = await _context.Artists.FindAsync(id);
+            var intId = (int)id;
+            var artist = await _context.Artists.FindAsync(intId);
 
             if (artist == null)
             {
