@@ -101,21 +101,18 @@ namespace BiblioApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Artist>> PostArtist(Artist artist)
         {
+            Console.WriteLine("coucou");
             // Should i use a custom Task for that ?
             // Search artist with the same name in the DB
-            var currentArtist = await Utils.FirstOrDefaultAsync(_context.Artists, (a) => a.ArtistName == artist.ArtistName);
+            // var currentArtist = await Utils.FirstOrDefaultAsync(_context.Artists, (a) => a.ArtistName == artist.ArtistName);
+            // that was false yes, sorry
 
-            if (currentArtist == null)
-            {
-                // Update the creation date to server date time...
-                artist.DateCreation = DateTime.Now;
+            artist.DateCreation = DateTime.Now;
 
-                currentArtist = artist;
-                _context.Artists.Add(currentArtist);
-                await _context.SaveChangesAsync();
-            }
+            _context.Artists.Add(artist);
+            await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetArtist", new { id = currentArtist.Id }, currentArtist);
+            return CreatedAtAction("GetArtist", new { id = artist.Id }, artist);
         }
 
         // DELETE: api/Artists/5
